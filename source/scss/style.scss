@@ -1,100 +1,120 @@
 @charset 'UTF-8';
-
 // imports
 @import url('//fonts.googleapis.com/css?family=Open+Sans');
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-
 // local imports
 @import '../../bower_components/google-material-color/dist/palette.scss';
-
 // variables
-$color-primary: palette(White);
-$color-secundary: palette(Grey, 800);
-
+$color-primary: palette(Black);
+$color-secundary: palette(White);
+$red-special: palette(Red, 600);
 // content styles
 *,
 *:after,
 *::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-color: $color-primary;
 	color: $color-secundary;
-		
+	padding-top: 160px;
+	
+	& p {
+		font-size: 18px;
+	}
+	
 }
 
 section {
 	// padding-top: 80px;
+	& article:nth-child(-1) {
+		border: solid 8px;
+		border-color: $color-secundary;
+	}
 }
 
 h1 {
 	margin-bottom: 50px;
+	font-size: 80px;
 }
 
 a, a:hover {
 	text-decoration: none;
 	padding-bottom: 2px;
-	color: $color-secundary;
-}
-
-#bg1 {
-	background-color: palette(Red, 700);
-	background-position: palette(Orange, A200);
+	color: $red-special;
 }
 
 // inline anchor style
 
 /* Grow */
+
+//colors
+$color_cape_cod_approx: snow;
 .hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
+	display: inline-block;
+	vertical-align: middle;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	//Instead of the line below you could use @include backface-visibility($visibility)
+	backface-visibility: hidden;
+	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+	transition-duration: 0.3s;
+	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+	transition-property: transform;
+	&:hover {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.1);
+	}
+	&:focus {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.1);
+	}
+	&:active {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.1);
+	}
 }
 
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
-}
-
-/* Underline From Left */
 .hvr-underline-from-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-left:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  background: #424242;
-  height: 2px;
-  -webkit-transition-property: right;
-  transition-property: right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
-  right: 0;
+	display: inline-block;
+	vertical-align: middle;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	//Instead of the line below you could use @include backface-visibility($visibility)
+	backface-visibility: hidden;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		background: $color_cape_cod_approx;
+		height: 2px;
+		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+		transition-property: right;
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 0.3s;
+		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+		transition-timing-function: ease-out;
+	}
+	&:hover:before {
+		right: 0;
+	}
+	&:focus:before {
+		right: 0;
+	}
+	&:active:before {
+		right: 0;
+	}
 }

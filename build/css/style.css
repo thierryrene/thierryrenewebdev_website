@@ -6035,20 +6035,24 @@ button.close {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #ffffff;
-  color: #424242; }
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 160px; }
+  body p {
+    font-size: 18px; }
+
+section article:nth-child(-1) {
+  border: solid 8px;
+  border-color: #ffffff; }
 
 h1 {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  font-size: 80px; }
 
 a, a:hover {
   text-decoration: none;
   padding-bottom: 2px;
-  color: #424242; }
-
-#bg1 {
-  background-color: #D32F2F;
-  background-position: #FFAB40; }
+  color: #E53935; }
 
 /* Grow */
 .hvr-grow {
@@ -6057,43 +6061,38 @@ a, a:hover {
   transform: translateZ(0);
   box-shadow: 0 0 1px transparent;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   transition-duration: 0.3s;
   transition-property: transform; }
+  .hvr-grow:hover {
+    transform: scale(1.1); }
+  .hvr-grow:focus {
+    transform: scale(1.1); }
+  .hvr-grow:active {
+    transform: scale(1.1); }
 
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-  transform: scale(1.1); }
-
-/* Underline From Left */
 .hvr-underline-from-left {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden; }
-
-.hvr-underline-from-left:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  background: #424242;
-  height: 2px;
-  -webkit-transition-property: right;
-  transition-property: right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
-
-.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
-  right: 0; }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: snow;
+    height: 2px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out; }
+  .hvr-underline-from-left:hover:before {
+    right: 0; }
+  .hvr-underline-from-left:focus:before {
+    right: 0; }
+  .hvr-underline-from-left:active:before {
+    right: 0; }
