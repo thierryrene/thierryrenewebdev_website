@@ -1,0 +1,33 @@
+extends template_base
+
+block append config
+	- var jQuery = true
+
+// block prepend metatags
+// block prepend linktags
+// block prepend favicontags
+// block prepend moremetatags
+
+block append scripttags
+	script.  
+		
+block append body_content
+
+	header
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header.navbar-brand thierry rene
+				
+	section
+		.container
+			.row
+				article.col-md-12.text-justify
+					h1 #[b Hello]
+					h3 #[b Well,]
+			.row
+				article.col-md-8.text-justify
+					p my name is #[a(target="_blank", href="//thierryrenewebdev.com", class="hvr-underlin-from-left") #[b thierry rene]], and I work with IT solutions for almost 10 years. Most of the time, I acted as a support analyst, but since 2009 I started working with webdevelopment in freelance projects.
+					
+					p I'm currently studying IT management in anhembi morumbi with full scholarship PROUNI.Previously I studied information systems, giving up because of the curriculum of thecourse grade. I made two technicians in Senac, all with full scholarship, computertechnician and technical development of web applications.
+					
+					p i have a #[a(href="//websocialdev.com", target="_blank", class="hvr-underline-fro-left") #[b blog]] where i share everything i know about web development.

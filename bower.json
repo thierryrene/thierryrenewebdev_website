@@ -1,0 +1,25 @@
+{
+  "name": "thierryrenewebdev",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "thierry rene"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/thierryrene/thierryrenewebdev_website",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.5.1",
+    "bootstrap-sass": "~3.3.6",
+    "font-awesome": "fontawesome#^4.5.0",
+    "google-material-color": "^1.2.6"
+  }
+}

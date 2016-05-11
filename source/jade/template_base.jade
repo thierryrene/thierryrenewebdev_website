@@ -1,0 +1,100 @@
+block config
+	include _config.jade
+
+doctype
+html(lang="pt-br")
+	head
+		title
+			block title
+				//- titulo definido através do arquivo _config.jade, com a variável PageTitle
+				| #{PageTitle}
+				
+		//- start metatags
+		block metatags
+			// start metatags
+			meta(charset="utf-8")
+			meta(http-equiv="X-UA-Compatible", content="IE=edge")
+			meta(name="viewport", content="width=device-width, initial-scale-1.0")
+			meta(name="description", content=MetaDesc)
+			meta(name="author", content=MetaAuthor)
+			meta(name="title", content=PageTitle)
+			meta(name="keywords", content="thierry rene, desenvolvedor web, tradutor, webdev, webdesign")
+			meta(name="copyright", content=MetaAuthor)
+			meta(http-equiv="cleartype", content="on")
+			// bing meta tags
+			meta(name="msvalidate.01", content="086C7B9115FFBAC3CA6EAF94F571BE8B")
+			// google verification metatag
+			meta(name='google-site-verification', content='ZjrrHSVfP-yMddXTenY3nS4XmBFmJmJYMAx1tML0AtM')
+			
+		//- start moremetatags
+		block moremetatags
+			// start moremetatags
+			// canonical
+			link(rel="canonical", href="//thierryrenewebdev.com/")
+			// google verification
+			meta(name="google-site-verification", content="ZjrrHSVfP-yMddXTenY3nS4XmBFmJmJYMAx1tML0AtM")
+			// twitter meta tags
+			meta(name='twitter:card', content='summary')
+			meta(name='twitter:site', content='@thierryrenne')
+			meta(name='twitter:creator', content='@thierryrenne')
+			meta(name='twitter:title', content='Thierry Rene Web Dev.')
+			meta(name='twitter:description', content='Desenvolver Web Front End')
+			meta(name='twitter:url', content='//thierryrenewebdev.com')
+			meta(name='twitter:image', content='//thierryrenewebdev.com/favicon/favicon-196x196.png')
+			// facebook meta tags
+			meta(property='og:type', content='article')
+			meta(property='og:site_name', content='Thierry Rene Web Developer')
+			meta(property='article:author', content='//facebook.com/thierryrenesantosmatos')
+			meta(property='og:title', content='Thierry Rene Web Dev.')
+			meta(property='og:description', content='Desenvolvedor Web Front End')
+			meta(property='og:url', content='//thierryrenewebdev.com')
+			meta(property='og:image', content='//thierryrenewebdev.com/favicon/favicon-196x196.png')
+			// pinterest meta tag
+			meta(name='p:domain_verify', content='37bc592e8f3676b53f1bf7f2e686ba5b')
+			
+		//- start linktags
+		block linktags
+			// start linktags
+			// link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/readable/bootstrap.min.css", rel="stylesheet")
+			link(href="purestyle.css", rel="stylesheet", type="text/css")
+			link(rel='canonical', href='//thierryrenewebdev.com/')
+			
+		//- start favicons
+		block favicontags
+			// start favicons
+			link(rel='apple-touch-icon', sizes='57x57', href='favicons/apple-touch-icon-57x57.png')
+			link(rel='apple-touch-icon', sizes='60x60', href='favicons/apple-touch-icon-60x60.png')
+			link(rel='apple-touch-icon', sizes='72x72', href='favicons/apple-touch-icon-72x72.png')
+			link(rel='apple-touch-icon', sizes='76x76', href='favicons/apple-touch-icon-76x76.png')
+			link(rel='apple-touch-icon', sizes='114x114', href='favicons/apple-touch-icon-114x114.png')
+			link(rel='apple-touch-icon', sizes='120x120', href='favicons/apple-touch-icon-120x120.png')
+			link(rel='apple-touch-icon', sizes='144x144', href='favicons/apple-touch-icon-144x144.png')
+			link(rel='apple-touch-icon', sizes='152x152', href='favicons/apple-touch-icon-152x152.png')
+			link(rel='apple-touch-icon', sizes='180x180', href='favicons/apple-touch-icon-180x180.png')
+			link(rel='icon', type='image/png', href='favicons/favicon-32x32.png', sizes='32x32')
+			link(rel='icon', type='image/png', href='favicons/android-chrome-192x192.png', sizes='192x192')
+			link(rel='icon', type='image/png', href='favicons/favicon-96x96.png', sizes='96x96')
+			link(rel='icon', type='image/png', href='favicons/favicon-16x16.png', sizes='16x16')
+			link(rel='manifest', href='favicons/manifest.json')
+			link(rel='mask-icon', href='favicons/safari-pinned-tab.svg', color='#5bbad5')
+			link(rel='shortcut icon', href='favicons/favicon.ico')
+			meta(name='msapplication-TileColor', content='#da532c')
+			meta(name='msapplication-TileImage', content='favicons/mstile-144x144.png')
+			meta(name='msapplication-config', content='favicons/browserconfig.xml')
+			meta(name='theme-color', content='#ffffff')
+
+		// if GoogleFonts
+			// google font
+			link(href="//fonts.googleapis.com/css?family=" + GoogleFonts, rel="stylesheet", type="text/css")
+		
+		block scripttags
+			script(src="js/output.min.js")
+			// if jQuery
+				//jquery
+				script(src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js")
+				
+	body
+		
+		block body_content
+		
+		
