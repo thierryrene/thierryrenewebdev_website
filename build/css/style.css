@@ -6041,7 +6041,8 @@ body {
   body p {
     font-size: 18px; }
 
-section article:nth-child(-1) {
+section article:nth-child(2) {
+  padding: 20px;
   border: solid 8px;
   border-color: #ffffff; }
 
