@@ -7,7 +7,7 @@
 // variables
 $color-primary: palette(Black);
 $color-secundary: palette(White);
-$red-special: palette(Red, 600);
+$red-special: palette(Red,600);
 // content styles
 *,
 *:after,
@@ -22,20 +22,17 @@ body {
 	background-color: $color-primary;
 	color: $color-secundary;
 	padding-top: 160px;
-	
 	& p {
 		font-size: 18px;
 	}
-	
 	& footer {
 		margin: 40px 0px 20px 0px;
 	}
-	
 }
 
 section {
 	// padding-top: 80px;
-	& article:nth-child(2) {
+	& article: nth-child(2) {
 		padding: 20px;
 		border: solid 8px;
 		border-color: $color-secundary;
@@ -47,7 +44,8 @@ h1 {
 	font-size: 80px;
 }
 
-a, a:hover {
+a,
+a:hover {
 	text-decoration: none;
 	padding-bottom: 2px;
 	color: $red-special;
@@ -59,6 +57,7 @@ a, a:hover {
 
 //colors
 $color_cape_cod_approx: snow;
+
 .hvr-grow {
 	display: inline-block;
 	vertical-align: middle;
