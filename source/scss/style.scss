@@ -4,10 +4,14 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 // local imports
 @import '../../bower_components/google-material-color/dist/palette.scss';
-// variables
-$color-primary: palette(Black);
-$color-secundary: palette(White);
-$red-special: palette(Red,600);
+// text colors variables
+$text-white: palette(White);
+$text-black: palette(Black);
+
+// bg colors variables
+$bg-dark: palette(Blue Grey, 500);
+$bg-light: palette(Grey, 50);
+
 // content styles
 *,
 *:after,
@@ -19,106 +23,57 @@ $red-special: palette(Red,600);
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	background-color: $color-primary;
-	color: $color-secundary;
-	padding-top: 160px;
-	& p {
-		font-size: 18px;
-	}
-	& footer {
-		margin: 40px 0px 20px 0px;
-	}
+	padding-top: 140px;
+	background-color: $bg-dark;
+	color: $text-white;
 }
 
-section {
-	// padding-top: 80px;
-	& article: nth-child(2) {
-		padding: 20px;
-		border: solid 8px;
-		border-color: $color-secundary;
+header {
+	& img {
+		$img-width-height: 300px;
+		margin: 0 auto;
+		max-width: $img-width-height;
+		max-height: $img-width-height;
 	}
 }
 
-h1 {
-	margin-bottom: 50px;
-	font-size: 80px;
-}
-
-a,
-a:hover {
+a {
 	text-decoration: none;
-	padding-bottom: 2px;
-	color: $red-special;
 }
 
-// inline anchor style
+// bootstrap modifications
 
-/* Grow */
-
-//colors
-$color_cape_cod_approx: snow;
-
-.hvr-grow {
-	display: inline-block;
-	vertical-align: middle;
-	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-	transform: translateZ(0);
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	//Instead of the line below you could use @include backface-visibility($visibility)
-	backface-visibility: hidden;
-	//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
-	transition-duration: 0.3s;
-	//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
-	transition-property: transform;
-	&:hover {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: scale(1.1);
-	}
-	&:focus {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: scale(1.1);
-	}
-	&:active {
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: scale(1.1);
-	}
+@media (min-width: 768px) {
+  .navbar-fixed-top {
+    padding: 25px 0;
+    transition: padding 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      transition: all 0.3s;
+    }
+    &.navbar-shrink {
+      padding: 10px 0;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+  }
 }
 
-.hvr-underline-from-left {
-	display: inline-block;
-	vertical-align: middle;
-	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-	transform: translateZ(0);
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	//Instead of the line below you could use @include backface-visibility($visibility)
-	backface-visibility: hidden;
-	position: relative;
-	overflow: hidden;
-	&:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 0;
-		right: 100%;
-		bottom: 0;
-		background: $color_cape_cod_approx;
-		height: 2px;
-		//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
-		transition-property: right;
-		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
-		transition-duration: 0.3s;
-		//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-		transition-timing-function: ease-out;
-	}
-	&:hover:before {
-		right: 0;
-	}
-	&:focus:before {
-		right: 0;
-	}
-	&:active:before {
-		right: 0;
-	}
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  a:focus {
+    outline: none;
+  }
+  .navbar-nav {
+    letter-spacing: 1px;
+    li a:focus {
+      outline: none;
+    }
+  }
+}
+
+.navbar-default, .navbar-inverse {
+  border: none;
 }

@@ -6035,67 +6035,39 @@ button.close {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
-  padding-top: 160px; }
-  body p {
-    font-size: 18px; }
-  body footer {
-    margin: 40px 0px 20px 0px; }
+  padding-top: 140px;
+  background-color: #607D8B;
+  color: #ffffff; }
 
-section article:nth-child(2) {
-  padding: 20px;
-  border: solid 8px;
-  border-color: #ffffff; }
+header img {
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px; }
 
-h1 {
-  margin-bottom: 50px;
-  font-size: 80px; }
+a {
+  text-decoration: none; }
 
-a, a:hover {
-  text-decoration: none;
-  padding-bottom: 2px;
-  color: #E53935; }
+@media (min-width: 768px) {
+  .navbar-fixed-top {
+    padding: 25px 0;
+    transition: padding 0.3s; }
+    .navbar-fixed-top .navbar-brand {
+      font-size: 2em;
+      transition: all 0.3s; }
+    .navbar-fixed-top.navbar-shrink {
+      padding: 10px 0; }
+      .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em; } }
 
-/* Grow */
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  backface-visibility: hidden;
-  transition-duration: 0.3s;
-  transition-property: transform; }
-  .hvr-grow:hover {
-    transform: scale(1.1); }
-  .hvr-grow:focus {
-    transform: scale(1.1); }
-  .hvr-grow:active {
-    transform: scale(1.1); }
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700; }
+  .navbar a:focus {
+    outline: none; }
+  .navbar .navbar-nav {
+    letter-spacing: 1px; }
+    .navbar .navbar-nav li a:focus {
+      outline: none; }
 
-.hvr-underline-from-left {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  backface-visibility: hidden;
-  position: relative;
-  overflow: hidden; }
-  .hvr-underline-from-left:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: 0;
-    background: snow;
-    height: 2px;
-    transition-property: right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out; }
-  .hvr-underline-from-left:hover:before {
-    right: 0; }
-  .hvr-underline-from-left:focus:before {
-    right: 0; }
-  .hvr-underline-from-left:active:before {
-    right: 0; }
+.navbar-default, .navbar-inverse {
+  border: none; }
