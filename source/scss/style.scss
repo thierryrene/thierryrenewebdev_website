@@ -4,13 +4,18 @@
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 // local imports
 @import '../../bower_components/google-material-color/dist/palette.scss';
+
+//colors
+$color-black: palette(Black);
+$color-white: palette(White);
+
 // text colors variables
 $text-white: palette(White);
 $text-black: palette(Black);
 
 // bg colors variables
-$bg-dark: palette(Blue Grey, 500);
-$bg-light: palette(Grey, 50);
+$bg-dark: palette(Blue Grey,500);
+$bg-light: palette(Grey,50);
 
 // content styles
 *,
@@ -24,8 +29,14 @@ $bg-light: palette(Grey, 50);
 body {
 	font-family: 'Open Sans', sans-serif;
 	padding-top: 140px;
-	background-color: $bg-dark;
-	color: $text-white;
+	background-color: $bg-light;
+	color: $text-black;
+}
+
+hr {
+	// border-color: #424242;
+	border: 2px solid $color-black;
+	margin: 30px 0;
 }
 
 header {
@@ -37,43 +48,74 @@ header {
 	}
 }
 
-a {
-	text-decoration: none;
+section {
+	margin: 40px 0px;
+	padding: 30px 0px;
+	
+	// &:nth-child(0) {
+	// 	background-color: crimson;
+	// }
+	// &:nth-child(1) {
+	//   background-color: blue;
+	// }
 }
 
-// bootstrap modifications
+footer {
+	padding: 20px 0px 30px 0px;
+	background-color: lightgray;
+}
 
+#section-two {
+	background-color: lightgray;
+}
+
+
+
+
+// bootstrap modifications
 @media (min-width: 768px) {
-  .navbar-fixed-top {
-    padding: 25px 0;
-    transition: padding 0.3s;
-    .navbar-brand {
-      font-size: 2em;
-      transition: all 0.3s;
-    }
-    &.navbar-shrink {
-      padding: 10px 0;
-      .navbar-brand {
-        font-size: 1.5em;
-      }
-    }
-  }
+	.navbar-fixed-top {
+		padding: 25px 0;
+		transition: padding 0.3s;
+		.navbar-brand {
+			font-size: 2em;
+			transition: all 0.3s;
+		}
+		&.navbar-shrink {
+			padding: 10px 0;
+			.navbar-brand {
+				font-size: 1.5em;
+			}
+		}
+	}
 }
 
 .navbar {
-  text-transform: uppercase;
-  font-weight: 700;
-  a:focus {
-    outline: none;
-  }
-  .navbar-nav {
-    letter-spacing: 1px;
-    li a:focus {
-      outline: none;
-    }
-  }
+	text-transform: uppercase;
+	font-weight: bolder;
+	a:focus {
+		outline: none;
+	}
+	.navbar-nav {
+		letter-spacing: 1px;
+		li a:focus {
+			outline: none;
+		}
+	}
 }
 
-.navbar-default, .navbar-inverse {
-  border: none;
+.navbar-default,
+.navbar-inverse {
+	border: none;
+}
+
+.nav-tabs {
+	border: none;
+	& li > a {
+		border-radius: 8px;
+		transition: all .5s;
+		// &:hover {
+		// 	border: 2px solid $color-white;
+		// }
+	}
 }

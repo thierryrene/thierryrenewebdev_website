@@ -115,10 +115,11 @@ module.exports = function(grunt) {
 			bower_js_files: {
 				files: {
 					"build/js/output.min.js": [
-						"bower_components/jquery/dist/jquery.min.js",
-						"bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js",
+						"source/js/modernizr.min.js",
+						"source/js/jquery.min.js",
+						"source/js/bootstrap.min.js",
 						"source/js/main.js",
-						"source/js/puglins.js"
+						"source/js/plugins.js"
 					]
 				}
 			}
