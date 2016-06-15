@@ -15,6 +15,7 @@
     "jade": "^1.11.0"
   },
   "devDependencies": {
+    "grunt-uncss": "^0.5.1",
     "jstransformer": "0.0.4",
     "jstransformer-markdown": "^1.1.0"
   },

@@ -54,26 +54,26 @@ module.exports = function(grunt) {
 			app: {
 				files: [{
 					expand: true,
-					cwd: "source/scss/",
-					src: ["*.scss"],
-					dest: "build/css",
-					ext: ".css"
+					cwd: 'source/scss/',
+					src: ['*.scss'],
+					dest: 'build/css',
+					ext: '.css'
 				}]
 			},
 			options: {
 				sourceMap: false,
-				// outputStyle: "nested",
-				imagePath: "source/scss/"
+				// outputStyle: 'nested',
+				imagePath: 'source/scss/'
 			}
 		},
 
 		purifycss: {
 			options: {},
 			target: {
-				src: ["build/*.html", "build/js/*.js"],
+				src: ['build/*.html', 'build/js/*.js'],
 				// animate.css é importado aqui pois não foi importado no arquivo de estilo scss.
-				css: ["build/css/*.css", "bower_components/animate.css/animate.min.css"],
-				dest: "build/purestyle.css"
+				css: ['build/css/*.css', 'bower_components/animate.css/animate.min.css'],
+				dest: 'build/purestyle.css'
 			}
 		},
 
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
 			compile: {
 				files: {
-					"build/purestyle.css": "build/purestyle.css"
+					'build/purestyle.css': 'build/purestyle.css'
 				}
 			}
 		},
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			clean: {
 				files: {
-					"build/purestyle.css": "build/purestyle.css"
+					'build/purestyle.css': 'build/purestyle.css'
 				}
 			}
 		},
@@ -103,10 +103,10 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: "source/jade/",
-					src: "*-ok.jade",
-					dest: "build",
-					ext: ".html"
+					cwd: 'source/jade/',
+					src: '*-ok.jade',
+					dest: 'build',
+					ext: '.html'
 				}]
 			}
 		},
@@ -114,12 +114,12 @@ module.exports = function(grunt) {
 		uglify: {
 			bower_js_files: {
 				files: {
-					"build/js/output.min.js": [
-						"source/js/modernizr.min.js",
-						"source/js/jquery.min.js",
-						"source/js/bootstrap.min.js",
-						"source/js/main.js",
-						"source/js/plugins.js"
+					'build/js/output.min.js': [
+						'source/js/modernizr.min.js',
+						'source/js/jquery.min.js',
+						'source/js/bootstrap.min.js',
+						'source/js/main.js',
+						'source/js/plugins.js'
 					]
 				}
 			}
@@ -127,24 +127,25 @@ module.exports = function(grunt) {
 
 		watch: {
 			sass: {
-				files: ["source/sass/{,*/}*.{scss,sass}"],
-				tasks: ["sass", "purifycss", "autoprefixer", "cssmin", "uglify"]
+				files: ['source/sass/{,*/}*.{scss,sass}'],
+				tasks: ['sass', 'purifycss', 'autoprefixer', 'cssmin', 'uglify']
 			},
 			jade: {
-				files: ["source/jade/*.jade", "source/scss/*.scss"],
-				tasks: ["jade", "sass", "purifycss", "autoprefixer", "cssmin", "uglify", "imagemin"]
+				files: ['source/jade/*.jade', 'source/scss/*.scss'],
+				tasks: ['jade', 'sass', 'purifycss', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']
 			}
 		}
 
 	});
 
 	//carregando plugins do grunt
-	grunt.loadNpmTasks("grunt-purifycss");
-	grunt.loadNpmTasks("grunt-autoprefixer");
-	grunt.loadNpmTasks("grunt-contrib-uglify");
-	grunt.loadNpmTasks("grunt-contrib-jade");
-	grunt.loadNpmTasks("grunt-sass");
-	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-contrib-cssmin");
+	grunt.loadNpmTasks('grunt-purifycss');
+	grunt.loadNpmTasks('grunt-uncss');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 };
