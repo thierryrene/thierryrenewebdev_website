@@ -71,8 +71,7 @@ module.exports = function(grunt) {
 			options: {},
 			target: {
 				src: ['build/*.html', 'build/js/*.js'],
-				// animate.css é importado aqui pois não foi importado no arquivo de estilo scss.
-				css: ['build/css/*.css', 'bower_components/animate.css/animate.min.css'],
+				css: ['build/css/*.css'],
 				dest: 'build/purestyle.css'
 			}
 		},
@@ -118,6 +117,7 @@ module.exports = function(grunt) {
 						'source/js/modernizr.min.js',
 						'source/js/jquery.min.js',
 						'source/js/bootstrap.min.js',
+						'bower_components/skrollr/dist/skrollr.min.js',
 						'source/js/main.js',
 						'source/js/plugins.js'
 					]

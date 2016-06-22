@@ -9,7 +9,10 @@ block append config
 // block prepend moremetatags
 
 block append scripttags
-	script.  
+	script.
+		$(function() {
+			var s = skrollr.init();
+		});
 		
 block append body_content
 
@@ -21,7 +24,7 @@ block append body_content
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a#home-bt.navbar-brand(href='/') thierry rene
+				a#home-bt.navbar-brand(href='/', data-0='font-size: 32px', data-200='font-size: 28px;') thierry rene
 			#thierry-portfolio-navbar.collapse.navbar-collapse
 				ul.nav.navbar-nav.navbar-right.nav-tabs(role='tablist')
 					li
@@ -42,7 +45,7 @@ block append body_content
 						h2
 							| web developer front end
 	
-	section#section-one(data-0="background-color:rgb(236,240,241);opacity:0.5;color:rgb(200, 200, 200);" data-250="background-color:rgb(230,126,34);opacity:1;" data-750="background-color:rgb(44,62,80);" data-2000="background-color:rgb(26,188,156);color:rgb(20,20,20);")
+	section#section-one
 		.container.text-center
 			.row
 				.col-sm-4.col-md-4.col-lg-4

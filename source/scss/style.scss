@@ -1,9 +1,8 @@
 @charset 'UTF-8';
 // imports
-@import url('//fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('//fonts.googleapis.com/css?family=Open+Sans|Quicksand');
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-// local imports
+@import '../bower_components/animate.css/animate.min.css';
 @import '../../bower_components/google-material-color/dist/palette.scss';
 //colors
 $color-black: palette(Black);
