@@ -55,7 +55,6 @@ html(lang="pt-br")
 		//- start linktags
 		block linktags
 			// start linktags
-			link(href="//necolas.github.io/normalize.css/4.1.1/normalize.css", rel="stylesheet")
 			link(href="purestyle.css", rel="stylesheet", type="text/css")
 			link(rel='canonical', href='//thierryrenewebdev.com/')
 			
@@ -83,16 +82,16 @@ html(lang="pt-br")
 			meta(name='msapplication-config', content='favicons/browserconfig.xml')
 			meta(name='theme-color', content='#ffffff')
 
-		// if GoogleFonts
+		if GoogleFonts
 			// google font
 			link(href="//fonts.googleapis.com/css?family=" + GoogleFonts, rel="stylesheet", type="text/css")
 		
 		block scripttags
 			script(src="js/output.min.js")
-			// if jQuery
-				//jquery
+			if jQuery
+				// jQuery CDN - only for tests - set to false on index-ok.jade
 				script(src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js")
-				
+
 	body
 		block body_content
 		
