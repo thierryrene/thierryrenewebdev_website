@@ -2,53 +2,53 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		imagemin: {
-			png: {
-				options: {
-					optimizationLevel: 7
-				},
-				files: [{
-					// Set to true to enable the following options…
-					expand: true,
-					// cwd is 'current working directory'
-					cwd: 'source/img/',
-					src: ['**/*.png'],
-					// Could also match cwd line above. i.e. project-directory/img/
-					dest: 'build/img/',
-					ext: '.png'
-				}]
-			},
-			jpg: {
-				options: {
-					progressive: true,
-				},
-				files: [{
-					// Set to true to enable the following options…
-					expand: true,
-					// cwd is 'current working directory'
-					cwd: 'source/img/',
-					src: ['**/*.jpg'],
-					// Could also match cwd. i.e. project-directory/img/
-					dest: 'build/img/',
-					ext: '.jpg'
-				}]
-			},
-			gif: {
-				options: {
-					interlaced: true
-				},
-				files: [{
-					// Set to true to enable the following options…
-					expand: true,
-					// cwd is 'current working directory'
-					cwd: 'source/img/',
-					src: ['**/*.gif'],
-					// Could also match cwd. i.e. project-directory/img/
-					dest: 'build/img/',
-					ext: '.gif'
-				}]
-			}
-		},
+		// imagemin: {
+		// 	png: {
+		// 		options: {
+		// 			optimizationLevel: 7
+		// 		},
+		// 		files: [{
+		// 			// Set to true to enable the following options…
+		// 			expand: true,
+		// 			// cwd is 'current working directory'
+		// 			cwd: 'source/img/',
+		// 			src: ['**/*.png'],
+		// 			// Could also match cwd line above. i.e. project-directory/img/
+		// 			dest: 'build/img/',
+		// 			ext: '.png'
+		// 		}]
+		// 	},
+		// 	jpg: {
+		// 		options: {
+		// 			progressive: true,
+		// 		},
+		// 		files: [{
+		// 			// Set to true to enable the following options…
+		// 			expand: true,
+		// 			// cwd is 'current working directory'
+		// 			cwd: 'source/img/',
+		// 			src: ['**/*.jpg'],
+		// 			// Could also match cwd. i.e. project-directory/img/
+		// 			dest: 'build/img/',
+		// 			ext: '.jpg'
+		// 		}]
+		// 	},
+		// 	gif: {
+		// 		options: {
+		// 			interlaced: true
+		// 		},
+		// 		files: [{
+		// 			// Set to true to enable the following options…
+		// 			expand: true,
+		// 			// cwd is 'current working directory'
+		// 			cwd: 'source/img/',
+		// 			src: ['**/*.gif'],
+		// 			// Could also match cwd. i.e. project-directory/img/
+		// 			dest: 'build/img/',
+		// 			ext: '.gif'
+		// 		}]
+		// 	}
+		// },
 
 		sass: {
 			app: {
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			options: {
-				sourceMap: false,
+				sourceMap: true,
 				// outputStyle: 'nested',
 				imagePath: 'source/scss/'
 			}
@@ -76,8 +76,10 @@ module.exports = function(grunt) {
 			}
 		},
 
-		//definindo configurações da task para o autoprefixer
 		autoprefixer: {
+			options: {
+				browsers: ['last 2 versions']
+			},
 			compile: {
 				files: {
 					'build/purestyle.css': 'build/purestyle.css'
@@ -85,13 +87,17 @@ module.exports = function(grunt) {
 			}
 		},
 
-		cssmin: {
-			clean: {
-				files: {
-					'build/purestyle.css': 'build/purestyle.css'
-				}
-			}
-		},
+		// cssmin: {
+		// 	clean: {
+		// 		files: [{
+		// 			expand: true,
+		// 			cwd: 'build',
+		// 			src: ['*.css'],
+		// 			dest: 'build',
+		// 			ext: '.min.css'
+		// 		}]
+		// 	}
+		// },
 
 		jade: {
 			compile: {
@@ -103,7 +109,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'source/jade/',
-					src: '*-ok.jade',
+					src: 'index.jade',
 					dest: 'build',
 					ext: '.html'
 				}]
@@ -132,20 +138,22 @@ module.exports = function(grunt) {
 			},
 			jade: {
 				files: ['source/jade/*.jade', 'source/scss/*.scss'],
-				tasks: ['jade', 'sass', 'purifycss', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']
+				// tasks: ['jade', 'sass', 'purifycss', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']
+				// tasks: ['jade', 'sass', 'purifycss', 'autoprefixer', 'cssmin', 'uglify']
+				tasks: ['jade', 'sass', 'purifycss', 'autoprefixer', 'uglify']
 			}
 		}
 
 	});
 
-	//carregando plugins do grunt
 	grunt.loadNpmTasks('grunt-purifycss');
-	grunt.loadNpmTasks('grunt-uncss');
+	// grunt.loadNpmTasks('grunt-uncss');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	// grunt.loadNpmTasks('grunt-contrib-cssmin');
+	// grunt.loadNpmTasks('grunt-contrib-imagemin');
+
 };

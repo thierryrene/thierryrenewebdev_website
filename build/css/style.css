@@ -5,7 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(../bower_components/animate.css/animate.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6026,6 +6025,33 @@ button.close {
  * google-material-color v1.2.6
  * https://github.com/danlevan/google-material-color
  */
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite {
+    animation-iteration-count: infinite; }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+  .animated.bounceIn,
+  .animated.bounceOut {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
+  .animated.flipOutX,
+  .animated.flipOutY {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
+
 *,
 *:after,
 *::before {
@@ -6039,6 +6065,14 @@ body {
   background-color: #FAFAFA;
   color: #000000;
   text-transform: initial; }
+  body header img {
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 300px; }
+  body header .intro {
+    padding: 25px 0px; }
+  body section article {
+    line-height: 28px; }
   body a {
     color: #424242;
     text-decoration: none; }
@@ -6046,15 +6080,7 @@ body {
       color: #212121; }
 
 hr {
-  border: 2px solid #000000; }
-
-header img {
-  margin: 0 auto;
-  max-width: 300px;
-  max-height: 300px; }
-
-header .intro {
-  padding: 25px 0px; }
+  border: 1px solid #000000; }
 
 .section {
   margin: 40px 0px;
@@ -6104,3 +6130,8 @@ header .intro {
   .nav-tabs li > a {
     border-radius: 8px;
     transition: all 0.5s; }
+    .nav-tabs li > a:hover {
+      border-color: #E0E0E0;
+      background-color: transparent; }
+
+/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
 // imports
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '../../bower_components/google-material-color/dist/palette.scss';
-@import '../bower_components/animate.css/animate.min.css';
+@import '../../bower_components/animate-sass/_animate.scss';
 
 //colors
 $color-black: palette(Black);
@@ -41,6 +41,27 @@ body {
 	color: $text-black;
 	text-transform: initial;
 	
+	header {
+		& img {
+			$img-width-height: 300px;
+			margin: 0 auto;
+			max-width: $img-width-height;
+			max-height: $img-width-height;
+		}
+		
+		& .intro {
+			padding: $default-section-padding;
+		}
+	}
+	
+	& section {
+		
+		& article {
+			line-height: 28px;
+		}
+		
+	}
+	
 	& a {
 		color: $link-default-color;
 		text-decoration: none;
@@ -51,21 +72,10 @@ body {
 }
 
 hr {
-	border: 2px solid $color-black;
+	border: 1px solid $color-black;
 }
 
-header {
-	& img {
-		$img-width-height: 300px;
-		margin: 0 auto;
-		max-width: $img-width-height;
-		max-height: $img-width-height;
-	}
-	
-	& .intro {
-		padding: $default-section-padding;
-	}
-}
+
 
 .section {
 	margin: 40px 0px;
@@ -137,8 +147,9 @@ header {
 	& li> a {
 		border-radius: 8px;
 		transition: all .5s;
-		// &:hover {
-		// 	border: 2px solid $color-white;
-		// }
+		&:hover {
+			border-color: #E0E0E0;
+			background-color: transparent;
+		}
 	}
 }

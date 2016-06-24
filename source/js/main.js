@@ -10,9 +10,9 @@
 
 $(document).ready(function() {
 
-	// $(document).on( "click", function() {
-	// 	console.log( "Consegui configurar o jquery no template!" );
-	// });
+	$(document).on( "click", function() {
+		console.log( "Consegui configurar o jquery no template!" );
+	});
 	
 	$('body').addClass('animated fadeIn').css("animation-duration", "3s");
 	
