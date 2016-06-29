@@ -2821,6 +2821,8 @@ body {
   background-color: #FAFAFA;
   color: #000000;
   text-transform: initial;}
+  body svg:not(:root) {
+ padding: 20px 20px 20px 0px;}
   body header img {
  margin: 0 auto;
  max-width: 300px;
@@ -3297,7 +3299,7 @@ background-color: transparent;}
   .hidden-xs {
  display: none !important;}
 }
- @media (min-width: 768px) {
+  @media (min-width: 768px) {
   .navbar-fixed-top {
  padding: 25px 0px;
  -webkit-transition: padding 0.3s;
