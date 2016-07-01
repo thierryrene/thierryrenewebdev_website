@@ -40,7 +40,7 @@ body {
 	padding-top: 140px;
 	background-color: $bg-light;
 	color: $text-black;
-	text-transform: initial;
+	text-transform: capitalize;
 	
 	& svg:not(:root) {
     padding: 20px 20px 20px 0px;
