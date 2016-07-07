@@ -47,9 +47,10 @@ body {
 	}
 	
 	& header {
+		
 		& img {
-			$img-width-height: 300px;
 			margin: 0 auto;
+			$img-width-height: 300px;
 			max-width: $img-width-height;
 			max-height: $img-width-height;
 		}
@@ -79,8 +80,6 @@ body {
 hr {
 	border: 1px solid $color-black;
 }
-
-
 
 .section {
 	margin: 40px 0px;
