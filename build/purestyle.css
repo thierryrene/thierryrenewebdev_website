@@ -2837,6 +2837,9 @@ body {
  max-height: 300px;}
   body header .intro {
  padding: 25px 0px;}
+  body header .header-title, body header .header-subtitle {
+ font-family: 'Quicksand', sans-serif;
+ text-transform: uppercase;}
   body section article {
  line-height: 28px;}
   body a {
@@ -2849,6 +2852,8 @@ hr {
 .section {
   margin: 40px 0px;
   padding: 30px 0px;}
+  .section-one {
+ font-family: 'Quicksand', sans-serif;}
   .section-two {
  background-color: lightgray;}
 .footer-info {
@@ -2859,7 +2864,7 @@ hr {
   padding: 25px 0px;}
 .navbar {
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: 400;
   font-family: 'Quicksand', sans-serif;
   background-color: #FAFAFA;
   border-bottom: solid 2px #EEEEEE;}
@@ -3358,7 +3363,7 @@ background-color: transparent;}
   100% {
  opacity: 1;}
 }
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-fixed-top {
  padding: 25px 0px;
  -webkit-transition: padding 0.3s;

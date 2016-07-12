@@ -60,6 +60,12 @@ body {
 		& .intro {
 			padding: $default-section-padding;
 		}
+		
+		& .header-title, .header-subtitle {
+			font-family: 'Quicksand', sans-serif;
+			text-transform: uppercase;
+		}
+		
 	}
 	
 	& section {
@@ -92,9 +98,15 @@ hr {
 	// &:nth-child(1) {
 	//   background-color: blue;
 	// }
+	
+	&-one {
+		font-family: 'Quicksand', sans-serif;
+	}
+	
 	&-two {
 		background-color: lightgray;
 	}
+	
 }
 
 .footer {
@@ -128,7 +140,7 @@ hr {
 
 .navbar {
 	text-transform: uppercase;
-	font-weight: bolder;
+	font-weight: 400;
 	font-family: 'Quicksand', sans-serif;
 	background-color: $bg-light;
 	border-bottom: solid 2px $color-grey;
