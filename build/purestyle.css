@@ -2831,6 +2831,8 @@ body {
   text-transform: capitalize;}
   body svg:not(:root) {
  padding: 20px 20px 20px 0px;}
+  body hr {
+ border: 1px solid #000000;}
   body header img {
  margin: 0 auto;
  max-width: 300px;
@@ -2847,8 +2849,6 @@ body {
  text-decoration: none;}
  body a:hover {
 color: #212121;}
-hr {
-  border: 1px solid #000000;}
 .section {
   margin: 40px 0px;
   padding: 30px 0px;}
@@ -3363,7 +3363,7 @@ background-color: transparent;}
   100% {
  opacity: 1;}
 }
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   .navbar-fixed-top {
  padding: 25px 0px;
  -webkit-transition: padding 0.3s;

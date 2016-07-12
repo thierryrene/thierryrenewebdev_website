@@ -5897,6 +5897,8 @@ body {
   text-transform: capitalize; }
   body svg:not(:root) {
     padding: 20px 20px 20px 0px; }
+  body hr {
+    border: 1px solid #000000; }
   body header img {
     margin: 0 auto;
     max-width: 300px;
@@ -5913,9 +5915,6 @@ body {
     text-decoration: none; }
     body a:hover {
       color: #212121; }
-
-hr {
-  border: 1px solid #000000; }
 
 .section {
   margin: 40px 0px;

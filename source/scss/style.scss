@@ -48,6 +48,10 @@ body {
     padding: 20px 20px 20px 0px;
 	}
 	
+	&	hr {
+		border: 1px solid $color-black;
+	}
+	
 	& header {
 		
 		& img {
@@ -85,9 +89,6 @@ body {
 	}
 }
 
-hr {
-	border: 1px solid $color-black;
-}
 
 .section {
 	margin: 40px 0px;
