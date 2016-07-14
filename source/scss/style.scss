@@ -44,6 +44,11 @@ body {
 	color: $text-black;
 	text-transform: capitalize;
 	
+	& h1, h2, h3, h4, h5, h6 {
+		font-family: 'Quicksand', sans-serif;
+		text-transform: uppercase;
+	}
+	
 	& svg:not(:root) {
     padding: 20px 20px 20px 0px;
 	}
@@ -55,20 +60,18 @@ body {
 	& header {
 		
 		& img {
-			margin: 0 auto;
 			$img-width-height: 300px;
 			max-width: $img-width-height;
 			max-height: $img-width-height;
+			margin: 0 auto;
 		}
 		
 		& .intro {
 			padding: $default-section-padding;
 		}
 		
-		& .header-title, .header-subtitle {
-			font-family: 'Quicksand', sans-serif;
-			text-transform: uppercase;
-		}
+		// & .header-title, .header-subtitle {
+		// }
 		
 	}
 	
@@ -99,10 +102,6 @@ body {
 	// &:nth-child(1) {
 	//   background-color: blue;
 	// }
-	
-	&-one {
-		font-family: 'Quicksand', sans-serif;
-	}
 	
 	&-two {
 		background-color: lightgray;

@@ -2829,19 +2829,19 @@ body {
   background-color: #FAFAFA;
   color: #000000;
   text-transform: capitalize;}
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+ font-family: 'Quicksand', sans-serif;
+ text-transform: uppercase;}
   body svg:not(:root) {
  padding: 20px 20px 20px 0px;}
   body hr {
  border: 1px solid #000000;}
   body header img {
- margin: 0 auto;
  max-width: 300px;
- max-height: 300px;}
+ max-height: 300px;
+ margin: 0 auto;}
   body header .intro {
  padding: 25px 0px;}
-  body header .header-title, body header .header-subtitle {
- font-family: 'Quicksand', sans-serif;
- text-transform: uppercase;}
   body section article {
  line-height: 28px;}
   body a {
@@ -2852,8 +2852,6 @@ color: #212121;}
 .section {
   margin: 40px 0px;
   padding: 30px 0px;}
-  .section-one {
- font-family: 'Quicksand', sans-serif;}
   .section-two {
  background-color: lightgray;}
 .footer-info {
@@ -3363,7 +3361,7 @@ background-color: transparent;}
   100% {
  opacity: 1;}
 }
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-fixed-top {
  padding: 25px 0px;
  -webkit-transition: padding 0.3s;

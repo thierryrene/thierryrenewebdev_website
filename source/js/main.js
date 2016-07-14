@@ -21,6 +21,7 @@ $(document).ready(function() {
 	
 	$('p').addClass('animated fadeIn').css("animation-delay", "3s");
 	
+	
 });
 
 
