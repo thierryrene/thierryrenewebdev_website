@@ -1,33 +1,24 @@
 @charset 'UTF-8';
-
 // imports
 // @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-compass.scss';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-
 @import '../../bower_components/google-material-color/dist/palette.scss';
-
 @import '../../bower_components/animate-sass/_animate.scss';
-
 //colors
 $color-black: palette(Black);
 $color-white: palette(White);
 $color-grey: palette(Grey, 200);
-
 // text colors variables
 $text-white: palette(White);
 $text-black: palette(Black);
-
 // link colors
 $link-default-color: palette(Grey, 800);
 $link-default-color-hover: palette(Grey, 900);
-
 // bg colors variables
-$bg-dark: palette(Blue Grey,500);
-$bg-light: palette(Grey,50);
-
+$bg-dark: palette(Blue Grey, 500);
+$bg-light: palette(Grey, 50);
 // section paddings
 $default-section-padding: 25px 0px;
-
 // content styles
 *,
 *:after,
@@ -43,46 +34,44 @@ body {
 	background-color: $bg-light;
 	color: $text-black;
 	text-transform: capitalize;
-	
-	& h1, h2, h3, h4, h5, h6 {
+	& h1,	h2,	h3,	h4,	h5,	h6 {
 		font-family: 'Quicksand', sans-serif;
 		text-transform: uppercase;
 	}
-	
 	& svg:not(:root) {
-    padding: 20px 20px 20px 0px;
+		padding: 20px 20px 20px 0px;
 	}
-	
-	&	hr {
-		border: 1px solid $color-black;
+	& hr {
+		border: solid 3px;
+		& .colorgraph {
+			height: 5px;
+			border-top: 0;
+			background: #c4e17f;
+			border-radius: 5px;
+			background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+			background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+			background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+			background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		}
 	}
-	
 	& header {
-		
 		& img {
 			$img-width-height: 300px;
 			max-width: $img-width-height;
 			max-height: $img-width-height;
 			margin: 0 auto;
 		}
-		
 		& .intro {
 			padding: $default-section-padding;
 		}
-		
 		// & .header-title, .header-subtitle {
 		// }
-		
 	}
-	
 	& section {
-		
 		& article {
 			line-height: 28px;
 		}
-		
 	}
-	
 	& a {
 		color: $link-default-color;
 		text-decoration: none;
@@ -91,7 +80,6 @@ body {
 		}
 	}
 }
-
 
 .section {
 	margin: 40px 0px;
@@ -102,11 +90,9 @@ body {
 	// &:nth-child(1) {
 	//   background-color: blue;
 	// }
-	
 	&-two {
 		background-color: lightgray;
 	}
-	
 }
 
 .footer {
