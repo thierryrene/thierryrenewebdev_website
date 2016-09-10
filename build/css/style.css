@@ -5895,16 +5895,13 @@ body {
   background-color: #FAFAFA;
   color: #000000;
   text-transform: capitalize; }
-  body h1,
-  body h2,
-  body h3,
-  body h4,
-  body h5,
-  body h6 {
+  body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: 'Quicksand', sans-serif;
     text-transform: uppercase; }
   body svg:not(:root) {
     padding: 20px 20px 20px 0px; }
+  body hr {
+    border-color: #424242; }
   body header img {
     max-width: 300px;
     max-height: 300px;
